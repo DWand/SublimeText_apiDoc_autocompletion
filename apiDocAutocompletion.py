@@ -15,7 +15,7 @@ class apiDocAutocompletion(sublime_plugin.EventListener):
         ("@apiErrorExample\tapiDoc", "@apiErrorExample ${1:[{type\}]} ${2:[title]}\n* ${3:example}"),
         ("@apiExample\tapiDoc", "@apiExample ${1:[{type\}]} ${2:title}\n* ${3:example}"),
         ("@apiGroup\tapiDoc", "@apiGroup ${1:name}"),
-        ("@apiHeader\taiDoc", "@apiHeader ${1:[(group)]} ${2:[{type\}]} ${3:[field=defaultValue]} ${4:[description]}"),
+        ("@apiHeader\tapiDoc", "@apiHeader ${1:[(group)]} ${2:[{type\}]} ${3:[field=defaultValue]} ${4:[description]}"),
         ("@apiHeaderExample\tapiDoc", "@apiHeaderExample ${1:[{type\}]} ${2:[title]}\n* ${3:example}"),
         ("@apiIgnore\tapiDoc", "@apiIgnore ${1:[hint]}"),
         ("@apiName\tapiDoc", "@apiName ${1:name}"),
