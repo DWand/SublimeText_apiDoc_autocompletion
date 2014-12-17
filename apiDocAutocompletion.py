@@ -1,6 +1,6 @@
-# Sublime Text 3 Plugin
+# Sublime Text Plugin
 # apiDocAutocompletion adds apiDoc tags to list of code completion suggestions.
-# Project: https://github.com/DWand/ST3_apiDocAutocompletion
+# Project: https://github.com/DWand/SublimeText_apiDoc_autocompletion
 # License: MIT
 
 import sublime
