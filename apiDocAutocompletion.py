@@ -44,7 +44,7 @@ class apiDocAutocompletion(sublime_plugin.EventListener):
     ]
 
     def on_query_completions(self, view, prefix, locations):
-        
+
         # Block comment scopes:
         # C#:
         #     source.cs comment.block.source.cs
@@ -69,12 +69,15 @@ class apiDocAutocompletion(sublime_plugin.EventListener):
         #     source.python string.quoted.double.block.python
         # Ruby:
         #     source.ruby comment.block.documentation.ruby
-        
+        # Clojure:
+        #     source.clojure comment.line.semicolon.double.clojure
+
         target_scopes = [
             "comment.block",
             "source.perl meta.comment.full-line.perl comment.line.number-sign.perl",
             "source.python string.quoted.double.block.python",
-            "source.erlang"
+            "source.erlang",
+            "source.clojure comment.line.semicolon.double.clojure",
         ]
 
         location = locations[0]
