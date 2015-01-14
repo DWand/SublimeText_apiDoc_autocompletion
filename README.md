@@ -1,7 +1,8 @@
 apiDoc Autocompletion
 ========================
 
-A plugin for Sublime Text that adds [apiDoc](https://github.com/apidoc/apidoc) tags to list of code completion suggestions.
+A plugin for Sublime Text that adds [apiDoc](https://github.com/apidoc/apidoc) tags to list of code
+completion suggestions.
 
 ## How to install
 
@@ -13,4 +14,6 @@ With [Package Control](https://sublime.wbond.net/):
 
 Manually:
 
-Drop the entire folder in Sublime's `Packages` folder.
+1. Open the Sublime's `Packages` folder
+2. Create the "apiDoc Autocompletion" folder
+3. Put all files from the repository there
