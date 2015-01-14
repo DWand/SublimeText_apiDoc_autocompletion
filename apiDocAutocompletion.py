@@ -5,8 +5,24 @@
 
 import sublime
 import sublime_plugin
+import re
 
 SETTINGS_FILENAME = 'apiDocAutocompletion.sublime-settings'
+
+
+def is_line_start(view, location):
+    """
+    Determines whether the given location is situated on beginning of the comment line
+    Returns:
+        bool: True if the location is situated in the beginning of the comment line,
+              False otherwise
+    """
+    word_bounds = view.word(location)
+    line_bounds = view.line(location)
+    prefix_bounds = sublime.Region(line_bounds.begin(), word_bounds.begin())
+    prefix = view.substr(prefix_bounds)
+    return re.search('\w', prefix) == None
+
 
 class apiDocAutocompletion(sublime_plugin.EventListener):
     _suggestions = [
@@ -91,6 +107,7 @@ class apiDocAutocompletion(sublime_plugin.EventListener):
         current_scope = view.scope_name(location)
 
         if any(scope in current_scope for scope in target_scopes) == True:
-            return apiDocAutocompletion._suggestions
-        else:
-            return None
+            if is_line_start(view, location):
+                return apiDocAutocompletion._suggestions
+
+        return None
