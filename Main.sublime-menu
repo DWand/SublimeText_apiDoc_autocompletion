@@ -1,0 +1,38 @@
+[
+	{
+		"caption": "Preferences",
+		"id": "preferences",
+		"mnemonic": "n",
+		"children":
+		[
+			{
+				"caption": "Package Settings",
+				"id": "package-settings",
+				"mnemonic": "P",
+				"children":
+				[
+					{
+						"caption": "apiDoc Autocompletion",
+						"children":
+						[
+							{
+								"caption": "Settings – Default",
+								"command": "open_file", "args":
+								{
+									"file": "${packages}/apiDoc Autocompletion/apiDocAutocompletion.sublime-settings"
+								}
+							},
+							{
+								"caption": "Settings – User",
+								"command": "open_file", "args":
+								{
+									"file": "${packages}/User/apiDocAutocompletion.sublime-settings"
+								}
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

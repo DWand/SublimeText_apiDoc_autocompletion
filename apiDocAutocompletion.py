@@ -6,6 +6,8 @@
 import sublime
 import sublime_plugin
 
+SETTINGS_FILENAME = 'apiDocAutocompletion.sublime-settings'
+
 class apiDocAutocompletion(sublime_plugin.EventListener):
     _suggestions = [
         ("@api\tapiDoc", "@api {${1:method}} ${2:path} ${3:[title]}"),
@@ -44,6 +46,11 @@ class apiDocAutocompletion(sublime_plugin.EventListener):
     ]
 
     def on_query_completions(self, view, prefix, locations):
+        settings = sublime.load_settings(SETTINGS_FILENAME)
+
+        plugin_disabled = settings.get('disabled', False)
+        if plugin_disabled:
+            return None
 
         # Block comment scopes:
         # C#:
@@ -86,4 +93,4 @@ class apiDocAutocompletion(sublime_plugin.EventListener):
         if any(scope in current_scope for scope in target_scopes) == True:
             return apiDocAutocompletion._suggestions
         else:
-            return []
+            return None
