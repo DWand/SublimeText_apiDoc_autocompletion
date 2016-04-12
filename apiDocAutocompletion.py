@@ -45,20 +45,6 @@ class apiDocAutocompletion(sublime_plugin.EventListener):
         ("@apiSuccessExample\tapiDoc", "@apiSuccessExample ${1:[{type\}]} ${2:[title]}\n${3:* }${4:example}"),
         ("@apiUse\tapiDoc", "@apiUse ${1:name}"),
         ("@apiVersion\tapiDoc", "@apiVersion ${1:version}"),
-        ("@apiDefineErrorStructure\tapiDoc [deprecated]", "@apiDefineErrorStructure ${1:name}"),
-        ("@apiDefineHeaderStructure\tapiDoc [deprecated]", "@apiDefineHeaderStructure ${1:name}"),
-        ("@apiDefinePermission\tapiDoc [deprecated]", "@apiDefinePermission ${1:name} ${2:[title]}\n${3:* }                     ${4:[description]}"),
-        ("@apiDefineStructure\tapiDoc [deprecated]", "@apiDefineStructure ${1:name}"),
-        ("@apiDefineSuccessStructure\tapiDoc [deprecated]", "@apiDefineSuccessStructure ${1:name}"),
-        ("@apiErrorStructure\tapiDoc [deprecated]", "@apiErrorStructure ${1:name}"),
-        ("@apiErrorTitle\tapiDoc [deprecated]", "@apiErrorTitle (${1:group}) ${2:description}"),
-        ("@apiGroupDescription\tapiDoc [deprecated]", "@apiGroupDescription ${1:text}"),
-        ("@apiHeaderStructure\tapiDoc [deprecated]", "@apiHeaderStructure ${1:name}"),
-        ("@apiHeaderTitle\tapiDoc [deprecated]", "@apiHeaderTitle (${1:group}) ${2:description}"),
-        ("@apiParamTitle\tapiDoc [deprecated]", "@apiParamTitle (${1:group}) ${2:description}"),
-        ("@apiStructure\tapiDoc [deprecated]", "@apiStructure ${1:name}"),
-        ("@apiSuccessStructure\tapiDoc [deprecated]", "@apiSuccessStructure ${1:name}"),
-        ("@apiSuccessTitle\tapiDoc [deprecated]", "@apiSuccessTitle (${1:group}) ${2:description}"),
     ]
 
     def on_query_completions(self, view, prefix, locations):
